@@ -120,8 +120,14 @@ big-desktop
   @media (max-width: 31.25em) {
     .header {
       height: 75vh;
-      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
+      padding: 0; } }
+  @media (max-width: 25em) {
+    .header {
+      height: 70vh;
+      clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 100%);
       padding: 0; } }
   .header__logo-box {
     position: absolute;
@@ -190,10 +196,11 @@ body {
   @media (max-width: 31.25em) {
     .heading-secondary {
       font-size: 1.5rem;
-      margin-top: 2rem; } }
+      margin-top: 3rem; } }
   @media (max-width: 25em) {
     .heading-secondary {
-      font-size: 1.45rem; } }
+      font-size: 1.45rem;
+      margin-top: 3rem; } }
   .heading-secondary:hover {
     transform: skewY(4deg) skewX(10deg);
     text-shadow: 0.5rem 2rem 2rem rgba(0, 0, 0, 0.2); }
