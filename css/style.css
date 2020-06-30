@@ -103,7 +103,20 @@ big-desktop
   background-size: cover;
   background-position: top;
   /*clip-path: polygon (x y, x y, x y); for triangle polygon(50% 0, 100% 100%, 0 100%)*/
-  position: relative; }
+  position: relative;
+  /*  @media (max-width: 31.25em){
+          height: 85vh;
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        padding: 0;
+      }   
+
+      @media (max-width: 25em){
+        height: 65vh;
+      clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
+      padding: 0;
+    }   */ }
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
@@ -116,18 +129,6 @@ big-desktop
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-      padding: 0; } }
-  @media (max-width: 31.25em) {
-    .header {
-      height: 75vh;
-      clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
-      padding: 0; } }
-  @media (max-width: 25em) {
-    .header {
-      height: 65vh;
-      clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
       padding: 0; } }
   .header__logo-box {
     position: absolute;
@@ -196,11 +197,11 @@ body {
   @media (max-width: 31.25em) {
     .heading-secondary {
       font-size: 1.5rem;
-      margin-top: 3rem; } }
+      margin-top: 4rem; } }
   @media (max-width: 25em) {
     .heading-secondary {
       font-size: 1.45rem;
-      margin-top: 3rem; } }
+      margin-top: 4rem; } }
   .heading-secondary:hover {
     transform: skewY(4deg) skewX(10deg);
     text-shadow: 0.5rem 2rem 2rem rgba(0, 0, 0, 0.2); }
